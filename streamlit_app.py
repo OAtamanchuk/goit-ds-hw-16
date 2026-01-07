@@ -125,12 +125,16 @@ def preprocess_vgg(img: Image.Image):
     canvas = Image.new("L", (size, size), color=0)
     canvas.paste(img, ((size - w) // 2, (size - h) // 2))
 
-    img = canvas.resize((224, 224))
+    img = canvas.resize((28, 28))
     img = np.array(img).astype("float32") / 255.0
 
     img = np.stack([img, img, img], axis=-1)
 
-    return np.expand_dims(img, axis=0), img
+    x = np.expand_dims(img, axis=0)
+    
+    x_vis = canvas.resize((224, 224))
+
+    return x, x_vis
 
 if uploaded_file:
     col1, col2 = st.columns([1, 1.2])
