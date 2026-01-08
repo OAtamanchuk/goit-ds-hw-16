@@ -9,13 +9,39 @@ Deploy: https://fashionmnistcnnvgg16.streamlit.app
 
 ## Technologies & Stack
 
-- **Python** - main programming language  
-- **Streamlit** - web application framework for interactive UI  
-- **TensorFlow / Keras** - training and inference of neural network models  
-- **Convolutional Neural Networks (CNN)** - custom model trained on Fashion MNIST  
-- **VGG16 (Transfer Learning)** - fine-tuned model for image classification  
-- **NumPy** - numerical computations and data processing  
-- **Pillow (PIL)** - image loading and preprocessing  
-- **Matplotlib** - visualization of training metrics (loss and accuracy)  
-- **Fashion MNIST dataset** - image dataset for training and evaluation  
+- **Python** 
+- **Streamlit** 
+- **TensorFlow / Keras** 
+- **Convolutional Neural Networks (CNN)**
+- **VGG16 (Transfer Learning)** 
+- **NumPy**
+- **Pillow (PIL)** 
+- **Matplotlib** 
+- **Fashion MNIST dataset** 
 
+## Functionality
+
+The Fashion MNIST classifier web application provides the following functionality:
+- Image upload in PNG, JPG, or JPEG format
+- Model selection: choose between CNN or VGG16 pre-trained models for classification.
+- Image preprocessing:
+   - Grayscale conversion and inversion
+   - Contrast enhancement
+   - Centering and resizing for model input
+   - RGB stacking for VGG16
+- Classification output:
+   - Predicted class
+   - Confidence score (%)
+   - Probabilities for all classes visualized as progress bars
+- Preprocessed image visualization
+- Training metrics visualization for the selected model.
+
+## Links
+
+- Deploy:
+
+https://fashionmnistcnnvgg16.streamlit.app
+
+- GitHub Repository:
+
+https://github.com/OAtamanchuk/goit-ds-hw-16
